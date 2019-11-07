@@ -1,0 +1,15 @@
+<h1>All Cocktails for you:</h1>
+
+<div class="container">
+  <div class="d-flex justify-content-around bd-highlight mb-3">
+      <% @cocktails.each do |cocktail| %>
+        <div class="avatar-square">
+          <%= link_to "#{cocktail.name}", cocktail_path(cocktail) %>
+        </div>
+      <% end %>
+
+  </div>
+</div>
+
+<%= link_to "Add New cocktail", new_cocktail_path(@cocktail), class: "btn btn-gradient" %>
+

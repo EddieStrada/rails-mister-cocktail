@@ -1,0 +1,20 @@
+<div class="card" style="width: 32rem;">
+  <img src="https://picsum.photos/200/300" class="card-img-top" alt="restaurant photo">
+  <div class="card-body">
+    <h1 class="card-text text-justify"> <%= @cocktail.name %></h1>
+  </div>
+  <div class="col-12">
+  <% @cocktail.doses.each do |dose| %>
+    <%= dose.description %> of
+    <%= dose.ingredient.name %>
+    <button type="button" class="btn btn-danger">
+      <%= link_to 'Delete', dose_path(dose), method: :delete %>
+    </button>
+
+  <% end %>
+  </div>
+
+<%= link_to "Back to list", cocktails_path, class: "btn btn-outline-dark"%>
+<%= link_to "Add a dose", new_cocktail_dose_path(@cocktail), class: "btn btn-outline-warning"%>
+<%= link_to "Add a new Cocktail", new_cocktail_path(@cocktail), class: "btn btn-outline-dark"%>
+
