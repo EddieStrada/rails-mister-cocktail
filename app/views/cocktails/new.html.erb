@@ -5,6 +5,9 @@
   <div class="p-2 bd-highlight">Flex item 2</div> -->
   <%= simple_form_for @cocktail do |f| %>
     <%= f.input :name %>
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
+ %>
     <div class="text-center">
       <%= f.submit "add this cocktail", class: "btn btn-gradient" %>
     </div>

@@ -4,6 +4,8 @@
   <div class="d-flex justify-content-around bd-highlight mb-3">
       <% @cocktails.each do |cocktail| %>
         <div class="avatar-square">
+          <%= cl_image_tag(cocktail.photo,
+      width: 400, height: 300, crop: :fill) %>
           <%= link_to "#{cocktail.name}", cocktail_path(cocktail) %>
         </div>
       <% end %>
