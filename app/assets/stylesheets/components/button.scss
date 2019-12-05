@@ -3,15 +3,15 @@
   padding: 8px 24px;
   border-radius: 4px;
   font-weight: bold;
+  background-color: $gray-blue;
   background: linear-gradient(#167FFB, #0F60C4);
   transition: background 0.3s ease;
   border: 1px solid #0F60C4;
-  width: 100%;
-}
-
-.btn-gradient:hover {
-  background: linear-gradient(#147EFF, #0F67DA);
-  color: white;
+  max-width: 500px;
+  &:hover {
+    background: linear-gradient(#147EFF, #0F67DA);
+    color: white;
+  }
 }
 
 .btn-ghost {
@@ -23,10 +23,20 @@
   opacity: 0.6;
   transition: opacity 0.3s ease;
   width: 100%;
+  &:hover {
+    opacity: 1;
+    color: $light-gray;
+  }
 }
 
-.btn-ghost:hover {
-  opacity: 1;
+.btn-danger {
+  color: #fff;
+  background-color: #FD1015;
+  a {
+    color: #f8f9fa;
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
-
 

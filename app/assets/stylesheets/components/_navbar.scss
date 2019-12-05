@@ -1,6 +1,8 @@
 .navbar-lewagon {
+  position: sticky;
   justify-content: space-between;
-  background: white;
+  background: $gray;
+  height: 60px;
 }
 
 .navbar-lewagon .navbar-collapse {

@@ -1,21 +1,16 @@
-
-<div class="container">
-  <h1>Add a Cocktail Here</h1>
-  <!-- <div class="p-2 bd-highlight">Flex item 1</div>
-  <div class="p-2 bd-highlight">Flex item 2</div> -->
-  <%= simple_form_for @cocktail do |f| %>
-    <%= f.input :name %>
-    <%= f.input :photo %>
-    <%= f.input :photo_cache, as: :hidden %>
-    <div class="text-center">
+<div class="container m-5">
+  <div class="input-card m-5">
+    <h1>Add a Cocktail Here</h1>
+    <%= simple_form_for @cocktail do |f| %>
+      <%= f.input :name %>
+      <%= f.input :photo %>
+      <%= f.input :photo_cache, as: :hidden %>
       <%= f.submit "add this cocktail", class: "btn btn-gradient" %>
+    <% end %>
+    <div class="pt-2 flex-grow-1">
+      <%= link_to "Back to list", cocktails_path, class: "btn btn-ghost mt-3" %>
     </div>
-  <% end %>
-  <div class="d-flex">
-  <div class="pt-2 flex-grow-1">
-    <%= link_to "Back to list", cocktails_path, class: "btn btn-ghost" %>
   </div>
-
 </div>
 
 

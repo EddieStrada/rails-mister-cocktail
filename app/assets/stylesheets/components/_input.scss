@@ -1,0 +1,22 @@
+#cocktail_name {
+  max-width: 500px;
+}
+
+.input-card {
+  color: $white;
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  padding: 20px;
+  width: 600px;
+  height: 50vh;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 1px 1px 15px rgba(0,0,0,0.2);
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("three_cocktails.jpeg");
+  .btn-gradient {
+    background-color: $gray-blue;
+  }
+}
+

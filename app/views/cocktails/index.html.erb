@@ -1,16 +1,31 @@
-<div class="container">
-  <h1>All Cocktails for you:</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX8477922.jpg);">
+  <div class="container banner-cont">
+    <div class="text-center">
+      <h1><strong>Mister Mixer</strong></h1>
+      <p>Create your own drink</p>
+      <p>Add more to it!</p>
+    </div>
+    <%= link_to "Start now", new_cocktail_path, class: "btn btn-ghost" %>
+  </div>
+</div>
+<div class="card-container">
+  <h1>All Cocktails for you</h1>
 
   <div class="cards">
       <% @cocktails.each do |cocktail| %>
-        <div class="avatar-square">
+        <div class="card-img">
           <%= cl_image_tag(cocktail.photo,
       width: 400, height: 300, crop: :fill) %>
+        <div class="card-name">
           <%= link_to "#{cocktail.name}", cocktail_path(cocktail) %>
         </div>
+        </div>
+
+
       <% end %>
   </div>
 </div>
+
 
 
 
