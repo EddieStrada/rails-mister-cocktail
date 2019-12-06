@@ -16,12 +16,10 @@
         <div class="card-img">
           <%= cl_image_tag(cocktail.photo,
       width: 400, height: 300, crop: :fill) %>
-        <div class="card-name">
-          <%= link_to "#{cocktail.name}", cocktail_path(cocktail) %>
+          <div class="card-name">
+            <%= link_to "#{cocktail.name}", cocktail_path(cocktail) %>
+          </div>
         </div>
-        </div>
-
-
       <% end %>
   </div>
 </div>

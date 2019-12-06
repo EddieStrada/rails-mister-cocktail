@@ -40,3 +40,26 @@
   }
 }
 
+.no-button {
+  color: $gray-blue;
+  &:hover {
+    text-decoration: none;
+    color: $gray-blue;
+    opacity: 0.7;
+  }
+}
+
+.fa-cocktail {
+  padding-left: 10px;
+  color: $orange;
+  font-size: 24px;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.fa-trash {
+  &:hover {
+    opacity: 0.8;
+  }
+}

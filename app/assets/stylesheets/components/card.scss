@@ -5,10 +5,15 @@
     margin: 1.5rem;
   }
 }
+.card {
+  margin: auto;
+  padding: 20px 0;
+}
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+  margin: 0 30px;
   // background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   padding: 10px;
@@ -22,6 +27,7 @@
   text-align: center;
   img {
     border-radius: 4px;
+    box-shadow: 1px 1px 15px rgba(0,0,0,0.2);
   }
   // background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))
 }
@@ -48,12 +54,17 @@
 }
 
 .card-text {
-  color: $white;
-  background-image: url("http://res.cloudinary.com/eddiestrada/image/upload/c_fill,h_300,w_400/v1573196413/o1euv1nhy41uzwgdz9r5.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 500px;
-  padding: 30px;
+  color: black;
+  img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 340px;
+    padding: 30px;
+    margin-left: 5px;
+  }
+  h1 {
+    color: $gray;
+  }
 }
 .card-trip {
   overflow: hidden;

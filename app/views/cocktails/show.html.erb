@@ -1,23 +1,27 @@
-<div class="container">
+<div class="container my-5">
   <div class="card" style="width: 32rem;">
-    <div class="card-body">
-      <h1 class="card-text text-center"> <%= @cocktail.name %></h1>
-  <!--     <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
-   -->
-    </div>
-    <div class="flex-column justify-content-around text-center">
-    <% @cocktail.doses.each do |dose| %>
-      <%= dose.description %> of
-      <%= dose.ingredient.name %>
-
-        <%= link_to dose_path(dose), method: :delete do %>
-         <i class="fas fa-trash" style="color: #E67E22; padding: 10px;"></i>
+    <div class="card-text">
+      <%= cl_image_tag @cocktail.photo, height: 300, width: 500 %>
+      <div class="d-flex justify-content-center">
+        <h1 class="text-center"><%= @cocktail.name %></h1>
+        <%= link_to new_cocktail_dose_path(@cocktail) do %>
+          <i class="fas fa-cocktail"></i>
         <% end %>
-
-
-    <% end %>
+      </div>
     </div>
-  <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail), class: "btn btn-outline-warning"%>
-  <%= link_to "Add a new Cocktail", new_cocktail_path(@cocktail), class: "btn btn-outline-dark"%>
-  <%= link_to "Back to list", cocktails_path, class: "text-center" %>
+    <div class="text-center">
+      <% @cocktail.doses.each do |dose| %>
+        <div class="ingredients-show">
+          <%= dose.description %> of
+          <%= dose.ingredient.name %>
+          <%= link_to dose_path(dose), method: :delete do %>
+           <i class="fas fa-trash" style="color: #E67E22; padding: 10px;"></i>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+    <div class="text-center">
+      <%= link_to "Back to list", cocktails_path, class: "no-button" %>
+    </div>
+  </div>
 </div>

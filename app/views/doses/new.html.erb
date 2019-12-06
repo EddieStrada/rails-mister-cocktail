@@ -1,8 +1,11 @@
-<h1>Make your super Drink!</h1>
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.association :ingredient %>
-  <%= f.input :description %>
-  <button type="button" class="btn btn-outline-warning"><%= f.button :submit %></button>
-  <%= link_to "Back to list", cocktails_path, class: "btn btn-outline-dark"%>
-
-<% end %>
+<div class="container">
+  <div class="input-dose-card my-5">
+    <h1>Add your super ingredient!</h1>
+    <%= simple_form_for [@cocktail, @dose] do |f| %>
+      <%= f.association :ingredient %>
+      <%= f.input :description %>
+      <button type="button" class="btn btn-warning"><%= f.button :submit %></button>
+      <%= link_to "Back to Cocktail", @cocktail, class: "btn btn-dark"%>
+    <% end %>
+  </div>
+</div>

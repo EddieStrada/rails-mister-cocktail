@@ -15,7 +15,7 @@
 
   <body>
     <div class="navbar-lewagon">
-      <p>navbar</p>
+      <%= link_to "Add a new Cocktail", new_cocktail_path(@cocktail), class: "btn btn-outline-dark"%>
     </div>
 
     <%= yield %>
@@ -28,14 +28,14 @@
         <a href="#"><i class="fab fa-twitter"></i></a>
         <a href="#"><i class="fab fa-linkedin"></i></a>
       </div>
-      <div class="footer">
-        This footer is made with <i class="fas fa-heart"></i> at Le Wagon
-      </div>
+
+      <p>This footer is made with <i class="fas fa-heart"></i> at Le Wagon</p>
+
     </div>
 
 
     <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
     <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
-</body>
   </body>
+
 </html>
